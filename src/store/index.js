@@ -1,8 +1,20 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
-  mutations: {},
+  state: {
+    CountVL:0
+  },
+
+getters:{
+    ShowCount(state){
+      return state.CountVL
+    }
+},
+  mutations: {
+    Increment(state){
+      state.CountVL += 1
+    }
+  },
   actions: {},
   modules: {},
 });
